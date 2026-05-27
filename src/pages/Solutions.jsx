@@ -29,9 +29,8 @@ export default function Solutions() {
 Surgical Precision                </span>
               </h1>
               <p className="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-lg">
-
-                        Ellipa delivers high-fidelity automation across your entire technology stack. From complex web interactions to deep API integrations, achieve 100% reliability.
-                                  </p>
+                Developing AI agents for inventory data management automation systems. We build autonomous workflows that monitor stock levels, synchronize multi-channel warehouse databases in real-time, predict supply chain demands, and eliminate operational bottlenecks with surgical precision.
+              </p>
               <div className="flex flex-wrap gap-stack-md">
                 <Link to="/signup" className="inline-flex px-8 py-4 bg-primary text-on-primary rounded-xl font-headline-md items-center gap-2 hover:shadow-lg transition-all text-center">
 
