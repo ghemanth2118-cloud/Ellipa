@@ -1,1 +1,43 @@
-/* CSS is handled by Tailwind CDN in index.html */
+/* CSS is handled by Tailwind CDN in index.html, with specific premium design overrides below */
+
+/* Responsive Page Margin Override */
+.px-page-margin {
+  padding-left: 1.25rem !important;
+  padding-right: 1.25rem !important;
+}
+
+@media (min-width: 768px) {
+  .px-page-margin {
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+  }
+}
+
+/* Responsive Section Gaps Override */
+.py-section-gap {
+  padding-top: 3.5rem !important;
+  padding-bottom: 3.5rem !important;
+}
+.pb-section-gap {
+  padding-bottom: 3.5rem !important;
+}
+
+@media (min-width: 768px) {
+  .py-section-gap {
+    padding-top: 8rem !important;
+    padding-bottom: 8rem !important;
+  }
+  .pb-section-gap {
+    padding-bottom: 8rem !important;
+  }
+}
+
+.gap-section-gap {
+  gap: 2.5rem !important;
+}
+
+@media (min-width: 768px) {
+  .gap-section-gap {
+    gap: 8rem !important;
+  }
+}

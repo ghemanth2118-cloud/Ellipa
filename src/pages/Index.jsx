@@ -277,7 +277,7 @@ Bridge the gap between 20-year-old legacy systems and modern API-driven architec
               {[...team, ...team].map((member, idx) => (
                 <div 
                   key={idx} 
-                  className="w-[360px] md:w-[400px] p-8 bg-surface-container-low rounded-2xl border border-outline-variant/30 flex flex-col justify-between hover:shadow-lg transition-all shrink-0 select-none"
+                  className="w-[310px] sm:w-[360px] md:w-[400px] p-8 bg-surface-container-low rounded-2xl border border-outline-variant/30 flex flex-col justify-between hover:shadow-lg transition-all shrink-0 select-none"
                 >
                   <p className="font-body-lg text-body-lg italic text-on-surface mb-8">
                     "{member.text}"
