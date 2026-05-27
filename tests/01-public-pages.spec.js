@@ -18,10 +18,11 @@ test.describe('01 · Public Pages – Rendering & Navigation', () => {
 
   test('Navbar links: Solutions, Process, Pricing, Enterprise', async ({ page }) => {
     await page.goto(BASE);
-    await expect(page.getByRole('link', { name: 'Solutions' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Process' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Pricing' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Enterprise' })).toBeVisible();
+    const nav = page.locator('nav');
+    await expect(nav.getByRole('link', { name: 'Solutions', exact: true })).toBeVisible();
+    await expect(nav.getByRole('link', { name: 'Process', exact: true })).toBeVisible();
+    await expect(nav.getByRole('link', { name: 'Pricing', exact: true })).toBeVisible();
+    await expect(nav.getByRole('link', { name: 'Enterprise', exact: true })).toBeVisible();
   });
 
   test('Pricing page renders three tier headings', async ({ page }) => {
@@ -48,7 +49,7 @@ test.describe('01 · Public Pages – Rendering & Navigation', () => {
   test('Process page loads without error', async ({ page }) => {
     await page.goto(`${BASE}/process`);
     await page.waitForLoadState('domcontentloaded');
-    await expect(page.locator('main, [role="main"], body')).toBeVisible();
+    await expect(page.locator('body')).toBeVisible();
   });
 
   test('Solutions page loads without error', async ({ page }) => {

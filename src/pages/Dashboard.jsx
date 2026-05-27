@@ -20,6 +20,7 @@ export default function Dashboard() {
   const [demoRunning, setDemoRunning] = useState(false);
   const [selectedTemplate, setSelectedTemplate] = useState('auth');
   const [demoLogs, setDemoLogs] = useState([]);
+  const simIntervalRef = React.useRef(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -27,10 +28,18 @@ export default function Dashboard() {
       setUser(firebaseUser);
       setLoading(false);
     });
-    return () => unsubscribe();
+    return () => {
+      unsubscribe();
+      if (simIntervalRef.current) {
+        clearInterval(simIntervalRef.current);
+      }
+    };
   }, []);
 
   const runDemoSimulation = (template) => {
+    if (simIntervalRef.current) {
+      clearInterval(simIntervalRef.current);
+    }
     setSelectedTemplate(template);
     setDemoRunning(true);
     setDemoLogs([]);
@@ -52,12 +61,14 @@ export default function Dashboard() {
     ];
 
     let currentStep = 0;
-    const interval = setInterval(() => {
+    simIntervalRef.current = setInterval(() => {
       if (currentStep < steps.length) {
-        setDemoLogs(prev => [...prev, `[${new Date().toLocaleTimeString()}] ${steps[currentStep]}`]);
+        const logLine = `[${new Date().toLocaleTimeString()}] ${steps[currentStep]}`;
+        setDemoLogs(prev => [...prev, logLine]);
         currentStep++;
       } else {
-        clearInterval(interval);
+        clearInterval(simIntervalRef.current);
+        simIntervalRef.current = null;
         setDemoRunning(false);
       }
     }, 850);
@@ -253,7 +264,7 @@ export default function Dashboard() {
                   <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
                   <span className="ml-2 font-mono tracking-normal text-[10px] text-white/60">ellipa-sandbox-v4.sh</span>
                 </div>
-                <span className="text-[10px] font-bold">Active</span>
+                <span className="text-[10px] font-bold">{demoRunning ? 'Simulating...' : 'Active'}</span>
               </div>
               
               <div className="flex-1 overflow-y-auto space-y-2 pr-2 min-h-[200px] max-h-[220px]">
@@ -278,11 +289,9 @@ export default function Dashboard() {
               </div>
               
               {demoRunning && (
-                <div className="absolute inset-0 bg-primary-container/75 backdrop-blur-[1px] flex items-center justify-center">
-                  <div className="bg-primary border border-white/10 px-4 py-2.5 rounded-lg flex items-center gap-3 text-white shadow-xl">
-                    <div className="w-4 h-4 border-2 border-secondary border-t-transparent rounded-full animate-spin"></div>
-                    <span className="font-sans text-xs tracking-wider uppercase font-bold">Simulating Execution...</span>
-                  </div>
+                <div className="mt-2 pt-2 border-t border-white/10 flex items-center gap-2 text-[10px] text-emerald-400/80">
+                  <div className="w-3 h-3 border-2 border-secondary border-t-transparent rounded-full animate-spin"></div>
+                  <span className="font-sans uppercase font-bold tracking-wider">Simulating Execution...</span>
                 </div>
               )}
             </div>

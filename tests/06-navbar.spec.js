@@ -46,25 +46,25 @@ test.describe('06 · Navbar – State & Navigation', () => {
 
   test('Navbar: Solutions link navigates to /solutions', async ({ page }) => {
     await page.goto(BASE);
-    await page.getByRole('link', { name: 'Solutions' }).click();
+    await page.locator('nav').getByRole('link', { name: 'Solutions', exact: true }).click();
     await expect(page).toHaveURL(/\/solutions/);
   });
 
   test('Navbar: Process link navigates to /process', async ({ page }) => {
     await page.goto(BASE);
-    await page.getByRole('link', { name: 'Process' }).click();
+    await page.locator('nav').getByRole('link', { name: 'Process', exact: true }).click();
     await expect(page).toHaveURL(/\/process/);
   });
 
   test('Navbar: Pricing link navigates to /pricing', async ({ page }) => {
     await page.goto(BASE);
-    await page.getByRole('link', { name: 'Pricing' }).click();
+    await page.locator('nav').getByRole('link', { name: 'Pricing', exact: true }).click();
     await expect(page).toHaveURL(/\/pricing/);
   });
 
   test('Navbar: Enterprise link navigates to /enterprise', async ({ page }) => {
     await page.goto(BASE);
-    await page.getByRole('link', { name: 'Enterprise' }).click();
+    await page.locator('nav').getByRole('link', { name: 'Enterprise', exact: true }).click();
     await expect(page).toHaveURL(/\/enterprise/);
   });
 
