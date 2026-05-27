@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const BASE = 'http://localhost:5174';
+const BASE = 'http://localhost:5173';
 
 // NOTE: Navbar shows "Sign Out" (not "Log Out") for authenticated users.
 // Auth state is real Firebase — bypass sign-in does NOT create a Firebase session,

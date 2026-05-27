@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const BASE = 'http://localhost:5174';
+const BASE = 'http://localhost:5173';
 
 test.describe('03 · Sign Up Flow', () => {
   test.beforeEach(async ({ page }) => {

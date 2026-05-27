@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const BASE = 'http://localhost:5174';
+const BASE = 'http://localhost:5173';
 
 test.describe('01 · Public Pages – Rendering & Navigation', () => {
   test('Home page loads with Ellipa brand in navbar', async ({ page }) => {

@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const BASE = 'http://localhost:5174';
+const BASE = 'http://localhost:5173';
 
 // Sign in using bypass hook → navigates directly to /dashboard
 // Dashboard does NOT redirect unauthenticated users (shows "Hey! there User")
