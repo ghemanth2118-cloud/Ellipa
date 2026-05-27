@@ -169,7 +169,7 @@ export default function Dashboard() {
             {[
               { icon: 'electric_bolt', title: 'Create First Automation', desc: 'Build a workflow in minutes with our visual editor.', href: '/solutions', cta: 'Explore' },
               { icon: 'payments', title: 'Upgrade Your Plan', desc: 'Unlock unlimited automations with a Pro or Enterprise plan.', href: '/pricing', cta: 'See Plans' },
-              { icon: 'calendar_month', title: 'Book an Onboarding Call', desc: 'Schedule a 1-on-1 session with our automation engineers.', href: '/enterprise', cta: 'Book Now' },
+              { icon: 'calendar_month', title: 'Talk to an Expert', desc: 'Schedule a session with our integration engineers.', href: '/pricing', cta: 'Contact' },
             ].map((action) => (
               <Link
                 key={action.title}

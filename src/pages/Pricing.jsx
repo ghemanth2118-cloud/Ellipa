@@ -145,7 +145,7 @@ check_circle                  </span>
                             On-Premise Deployment Options
                                         </li>
               </ul>
-              <Link to="/enterprise" className="block w-full py-3 border border-primary text-primary rounded-lg font-label-sm hover:bg-surface-container-low transition-all text-center">
+              <Link to="/signup?plan=enterprise" className="block w-full py-3 border border-primary text-primary rounded-lg font-label-sm hover:bg-surface-container-low transition-all text-center">
 Contact Sales              </Link>
             </div>
           </div>
@@ -226,7 +226,7 @@ Custom Automation Design                </h2>
 Our engineering team partners with you to build proprietary automation logic tailored to your unique infrastructure and business rules.                </p>
               </div>
               <div className="mt-stack-lg z-10">
-                <button className="px-8 py-3 bg-tertiary-fixed text-on-tertiary-fixed rounded-lg font-label-sm hover:opacity-90 flex items-center gap-2 group" onClick={() => navigate('/enterprise')}>
+                <button className="px-8 py-3 bg-tertiary-fixed text-on-tertiary-fixed rounded-lg font-label-sm hover:opacity-90 flex items-center gap-2 group" onClick={() => navigate('/signup')}>
 
                             Start Consultation
                                               <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
@@ -295,7 +295,7 @@ Join 2,000+ companies that rely on Ellipa for mission-critical operations.      
               <div className="flex flex-col md:flex-row justify-center gap-stack-md">
                 <Link to="/signup" className="inline-block px-10 py-4 bg-secondary text-on-secondary rounded-lg font-label-sm text-lg hover:brightness-110 transition-all text-center">
 Get Started Now                </Link>
-                <Link to="/enterprise" className="inline-block px-10 py-4 border border-surface-container-low text-surface-container-low rounded-lg font-label-sm text-lg hover:bg-white/10 transition-all text-center">
+                <Link to="/signup" className="inline-block px-10 py-4 border border-surface-container-low text-surface-container-low rounded-lg font-label-sm text-lg hover:bg-white/10 transition-all text-center">
 Speak to an Expert                </Link>
               </div>
             </div>

@@ -165,7 +165,7 @@ API &amp; Integration Ecosystem                </h2>
 
                             Go beyond the UI. Validate the core logic of your platform with industrial-strength API automation.
                                         </p>
-                <Link to="/enterprise" className="inline-flex items-center gap-2 font-label-sm text-secondary-fixed hover:text-white transition-colors">
+                <Link to="/signup" className="inline-flex items-center gap-2 font-label-sm text-secondary-fixed hover:text-white transition-colors">
 
                             View Documentation                   <span className="material-symbols-outlined">
 arrow_right_alt                  </span>
@@ -287,9 +287,9 @@ Trace every action with comprehensive system and test logs.                    <
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-stack-md">
-                <button className="bg-primary text-on-primary px-10 py-5 rounded-2xl font-headline-md hover:opacity-90 transition-all shadow-lg" onClick={() => navigate('/enterprise')}>
+                <button className="bg-primary text-on-primary px-10 py-5 rounded-2xl font-headline-md hover:opacity-90 transition-all shadow-lg" onClick={() => navigate('/signup')}>
 Download Security Whitepaper                </button>
-                <button className="bg-surface-container-high text-primary px-10 py-5 rounded-2xl font-headline-md hover:bg-surface-container transition-all" onClick={() => navigate('/enterprise')}>
+                <button className="bg-surface-container-high text-primary px-10 py-5 rounded-2xl font-headline-md hover:bg-surface-container transition-all" onClick={() => navigate('/signup')}>
 Talk to Enterprise Sales                </button>
               </div>
             </div>

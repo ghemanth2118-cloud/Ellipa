@@ -56,9 +56,6 @@ export default function Navbar() {
               <Link to="/pricing" className={getLinkClass('/pricing')}>
                 Pricing
               </Link>
-              <Link to="/enterprise" className={getLinkClass('/enterprise')}>
-                Enterprise
-              </Link>
             </div>
           </div>
           <div className="flex items-center gap-2 sm:gap-4">
@@ -134,12 +131,6 @@ export default function Navbar() {
                 className={`text-lg font-semibold tracking-tight pb-2 border-b border-outline-variant/10 ${isActive('/pricing') ? 'text-secondary font-bold' : 'text-on-surface-variant'}`}
               >
                 Pricing
-              </Link>
-              <Link 
-                to="/enterprise" 
-                className={`text-lg font-semibold tracking-tight pb-2 border-b border-outline-variant/10 ${isActive('/enterprise') ? 'text-secondary font-bold' : 'text-on-surface-variant'}`}
-              >
-                Enterprise
               </Link>
             </div>
             
