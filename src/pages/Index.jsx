@@ -12,18 +12,21 @@ export default function Index() {
       name: "Gyana Vardhan",
       role: "Founder, Ellipa",
       initials: "GV",
+      image: "/gyan-vardhan.jpeg",
       text: "Ellipa was built on the principle of absolute precision. We've replaced billing by the hour with guaranteed, high-performance fixed-cost automation modules."
     },
     {
       name: "Manahor",
       role: "CFO, Ellipa",
       initials: "M",
+      image: "/manahor.jpeg",
       text: "With zero hidden fees and predictable flat-rate options, we ensure that modern enterprise teams receive unmatched technical ROI and budget certainty."
     },
     {
       name: "Vikas",
       role: "Product Manager",
       initials: "V",
+      image: "/vikas.jpeg",
       text: "Our mission is to translate complex product goals into seamless automated workflows. Ellipa makes inventory and data systems run like clockwork."
     },
     {
@@ -278,9 +281,17 @@ Bridge the gap between 20-year-old legacy systems and modern API-driven architec
                     "{member.text}"
                   </p>
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-secondary-fixed overflow-hidden flex items-center justify-center font-bold text-secondary text-lg">
-                      {member.initials}
-                    </div>
+                    {member.image ? (
+                      <img 
+                        src={member.image} 
+                        alt={member.name} 
+                        className="w-12 h-12 rounded-full object-cover border border-outline-variant/30 shrink-0"
+                      />
+                    ) : (
+                      <div className="w-12 h-12 rounded-full bg-secondary-fixed overflow-hidden flex items-center justify-center font-bold text-secondary text-lg shrink-0">
+                        {member.initials}
+                      </div>
+                    )}
                     <div>
                       <p className="font-label-sm text-label-sm text-primary font-bold">
                         {member.name}
