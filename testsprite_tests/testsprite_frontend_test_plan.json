@@ -1,0 +1,1073 @@
+[
+  {
+    "id": "TC001",
+    "title": "Log out from the dashboard to return to the homepage",
+    "description": "A signed-in user can log out from the dashboard and return to the public homepage with sign-in and get-started actions available.",
+    "category": "User Sign In",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signin"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with example@gmail.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with any password"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign-in form"
+      },
+      {
+        "type": "action",
+        "description": "Open the account menu"
+      },
+      {
+        "type": "action",
+        "description": "Log out of the account"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the homepage is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify public sign-in and get-started actions are visible"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Sign in with email and password",
+    "description": "An existing user can sign in with email and password and reach the authenticated dashboard.",
+    "category": "User Sign In",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signin"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign-in form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the dashboard is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a personalized greeting and KPI cards are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "Access the dashboard workspace after signing in",
+    "description": "A returning user can sign in and reach the authenticated dashboard with the personalized workspace visible.",
+    "category": "Authenticated Dashboard",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signin"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with example@gmail.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign-in form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the personalized greeting is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the KPI stats cards are visible"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "Return to the public homepage after logging out",
+    "description": "An authenticated user can log out and return to the public homepage with public actions visible.",
+    "category": "Auth-Aware Navigation State",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signin"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with example@gmail.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign-in form"
+      },
+      {
+        "type": "action",
+        "description": "Log out from the navbar"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the public homepage is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify sign in and get started actions are visible in the navbar"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC005",
+    "title": "Create an account with email and password",
+    "description": "A new user can register with name, work email, and password and see the account creation success screen.",
+    "category": "User Registration",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signup"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the name field with a new user name"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the work email field with autotest-newuser@example.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with a valid password"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign-up form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the account creation success screen is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a continue-to-dashboard action is available"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC006",
+    "title": "See sign in and sign up actions on the public site",
+    "description": "A visitor can view the public navbar actions and reach the sign in or sign up pages from a public page.",
+    "category": "Auth-Aware Navigation State",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify sign in and get started actions are visible in the navbar"
+      },
+      {
+        "type": "action",
+        "description": "Open the sign in page from the navbar"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the sign in page is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Open the sign up page from the navbar"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the sign up page is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC007",
+    "title": "Book a demo from the dashboard",
+    "description": "An authenticated user can submit the book-a-demo form from the dashboard and see a submission confirmation.",
+    "category": "User Sign In",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signin"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with example@gmail.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with any password"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign-in form"
+      },
+      {
+        "type": "action",
+        "description": "Open the book a demo modal"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the name field with a new user name"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the work email field with autotest-demo@example.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the company field with a company name"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the message field with a demo request message"
+      },
+      {
+        "type": "action",
+        "description": "Submit the demo request form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a request submitted confirmation is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the dashboard is visible after closing the modal"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC008",
+    "title": "Compare plans and start signup from pricing",
+    "description": "A visitor can review plan options on the pricing page and continue into signup from a plan CTA.",
+    "category": "Pricing and Conversion CTAs",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /pricing"
+      },
+      {
+        "type": "action",
+        "description": "Review the available plan options"
+      },
+      {
+        "type": "action",
+        "description": "Compare the plan feature table"
+      },
+      {
+        "type": "action",
+        "description": "Choose a starter plan call to action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the signup flow opens with plan context preserved"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC009",
+    "title": "Run the sandbox simulation and see progress log output",
+    "description": "An authenticated user can start the sandbox simulator and observe progressive log output ending in completion.",
+    "category": "Sandbox Simulator",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signin"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with example@gmail.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign in form"
+      },
+      {
+        "type": "action",
+        "description": "Start the sandbox simulation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify simulation log entries appear progressively"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the simulation completion state is shown"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC010",
+    "title": "Review pricing options and continue to signup",
+    "description": "A visitor can compare pricing tiers and use a pricing call to action to begin account creation.",
+    "category": "Public Marketing Site Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /pricing"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the pricing tiers and comparison content are displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the call to action for starting a signup"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the signup page is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC011",
+    "title": "Continue to signup from the professional plan",
+    "description": "A visitor can select the professional plan on the pricing page and reach signup with the selected plan context.",
+    "category": "Pricing and Conversion CTAs",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /pricing"
+      },
+      {
+        "type": "action",
+        "description": "Review the available plan options"
+      },
+      {
+        "type": "action",
+        "description": "Select the professional trial call to action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the signup flow opens with plan context preserved"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC012",
+    "title": "Start the sandbox simulation from the dashboard",
+    "description": "An authenticated user can start the sandbox simulation and see progressive log output appear.",
+    "category": "Authenticated Dashboard",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signin"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with example@gmail.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign-in form"
+      },
+      {
+        "type": "action",
+        "description": "Start the sandbox simulation from the dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify sandbox simulation log output is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the log output progresses over time"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC013",
+    "title": "Sign in with the email bypass account",
+    "description": "A returning user using the bypass email can sign in and reach the dashboard without relying on external authentication.",
+    "category": "User Sign In",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signin"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with example@gmail.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with any password"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign-in form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the dashboard is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a personalized greeting and KPI cards are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC014",
+    "title": "Open enterprise contact path from pricing",
+    "description": "A visitor can choose the enterprise option on the pricing page and open the enterprise contact path.",
+    "category": "Pricing and Conversion CTAs",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /pricing"
+      },
+      {
+        "type": "action",
+        "description": "Review the available plan options"
+      },
+      {
+        "type": "action",
+        "description": "Select the enterprise contact call to action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the enterprise contact path opens"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC015",
+    "title": "Continue from signup success to the dashboard",
+    "description": "A new user can move from the signup success screen into the authenticated dashboard after completing registration.",
+    "category": "User Registration",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signup"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the name field with a new user name"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the work email field with autotest-dashboard@example.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with a valid password"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign-up form"
+      },
+      {
+        "type": "action",
+        "description": "Continue to the dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the dashboard is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a personalized greeting and KPI cards are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC016",
+    "title": "Open solutions from the dashboard quick action",
+    "description": "An authenticated user can open the solutions page from the dashboard quick action after signing in.",
+    "category": "Authenticated Dashboard",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signin"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with example@gmail.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign-in form"
+      },
+      {
+        "type": "action",
+        "description": "Open the solutions quick action from the dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the solutions page is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC017",
+    "title": "Start the sandbox simulator from the dashboard",
+    "description": "An authenticated user can open the sandbox simulator from the dashboard and see progressive output begin.",
+    "category": "User Sign In",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signin"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with example@gmail.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with any password"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign-in form"
+      },
+      {
+        "type": "action",
+        "description": "Start the sandbox simulator"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the sandbox simulator is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify progressive simulator output is visible"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC018",
+    "title": "Reach sign in from public pricing entry points",
+    "description": "A visitor can move from pricing to the authenticated entry path through the sign in or get started actions.",
+    "category": "Pricing and Conversion CTAs",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /pricing"
+      },
+      {
+        "type": "action",
+        "description": "Review the available plan options"
+      },
+      {
+        "type": "action",
+        "description": "Choose a sign in or get started action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the sign in or signup entry path opens"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC019",
+    "title": "Sandbox simulator remains available after dashboard load",
+    "description": "A signed-in user can open the dashboard and access the sandbox simulator from the main workspace.",
+    "category": "Sandbox Simulator",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signin"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with example@gmail.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign in form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the dashboard workspace is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the sandbox simulator is available"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC020",
+    "title": "Navigate the public site from the homepage",
+    "description": "A visitor can use the main navigation on the homepage to review the key public pages and return home successfully.",
+    "category": "Public Marketing Site Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the pricing page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the pricing page content is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the process page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the process page content is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the solutions page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the solutions page content is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the enterprise page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the enterprise page content is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to return to the homepage"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the homepage content is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC021",
+    "title": "Review the enterprise page",
+    "description": "A prospective enterprise buyer can open the enterprise page and see the enterprise-focused content and contact entry point.",
+    "category": "Public Marketing Site Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /enterprise"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the enterprise features content is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an enterprise contact call to action is available"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC022",
+    "title": "Preserve pricing context when starting signup",
+    "description": "A visitor can start signup from a pricing page and keep the pricing context visible in the signup experience.",
+    "category": "Public Marketing Site Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /pricing"
+      },
+      {
+        "type": "action",
+        "description": "Click the call to action for the professional plan"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the signup page is displayed with pricing context preserved"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC023",
+    "title": "Review the solutions page",
+    "description": "A visitor can open the solutions page and view the product highlights without the page being blocked by embedded content.",
+    "category": "Public Marketing Site Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /solutions"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the solutions overview content is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the page content is visible even if embedded content does not load"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC024",
+    "title": "Sandbox simulation can be started again after completion",
+    "description": "An authenticated user can complete a sandbox run and start another run from the dashboard.",
+    "category": "Sandbox Simulator",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signin"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with example@gmail.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign in form"
+      },
+      {
+        "type": "action",
+        "description": "Start the sandbox simulation"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the simulation to complete"
+      },
+      {
+        "type": "action",
+        "description": "Start the sandbox simulation again"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a new simulation run begins"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC025",
+    "title": "Review the process page",
+    "description": "A visitor can open the process overview page and see the workflow content that explains how the product works.",
+    "category": "Public Marketing Site Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /process"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the process overview content is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC026",
+    "title": "Sandbox simulation is visible for authenticated users on load",
+    "description": "A returning authenticated user can load the dashboard and see the main workspace with simulator access.",
+    "category": "Sandbox Simulator",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signin"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with example@gmail.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign in form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the dashboard greeting is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify key dashboard summary cards are displayed"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC027",
+    "title": "Dismiss the demo modal without submitting",
+    "description": "An authenticated user can close the demo booking modal and return to the dashboard without saving a request.",
+    "category": "Book a Demo Request",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signin"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with example@gmail.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign-in form"
+      },
+      {
+        "type": "action",
+        "description": "Open the demo booking modal from the dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Dismiss the modal"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the dashboard is visible again"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the demo form is no longer visible"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC028",
+    "title": "Show an error for invalid sign in credentials",
+    "description": "A user entering invalid sign-in credentials sees an inline error and remains on the sign-in page.",
+    "category": "User Sign In",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signin"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with invalid@example.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with invalid-password"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign-in form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an inline sign-in error message is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the dashboard is not displayed"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC029",
+    "title": "Reset the demo form after closing the modal",
+    "description": "An authenticated user can close a partially filled demo form and reopen it with the fields cleared.",
+    "category": "Book a Demo Request",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signin"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with example@gmail.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign-in form"
+      },
+      {
+        "type": "action",
+        "description": "Open the demo booking modal from the dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the name field with Jordan Lee"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the work email field with jordan.lee@example.com"
+      },
+      {
+        "type": "action",
+        "description": "Dismiss the modal"
+      },
+      {
+        "type": "action",
+        "description": "Open the demo booking modal from the dashboard again"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the demo form fields are empty"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the dashboard remains accessible behind the modal"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC030",
+    "title": "Show validation when required demo fields are missing",
+    "description": "An authenticated user sees validation feedback and cannot submit the demo form until required fields are completed.",
+    "category": "Book a Demo Request",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signin"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with example@gmail.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign-in form"
+      },
+      {
+        "type": "action",
+        "description": "Open the demo booking modal from the dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Submit the demo request form without entering details"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify required field validation is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the confirmation state is not visible"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC031",
+    "title": "Close the book demo modal without submitting",
+    "description": "An authenticated user can dismiss the book-a-demo modal and return to the dashboard without submitting the form.",
+    "category": "User Sign In",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signin"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with example@gmail.com"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with any password"
+      },
+      {
+        "type": "action",
+        "description": "Submit the sign-in form"
+      },
+      {
+        "type": "action",
+        "description": "Open the book a demo modal"
+      },
+      {
+        "type": "action",
+        "description": "Dismiss the modal using the backdrop"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the modal is closed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the dashboard remains visible"
+      }
+    ],
+    "priority": "Low"
+  }
+]

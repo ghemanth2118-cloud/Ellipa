@@ -1,0 +1,33 @@
+.parallax {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.scroller {
+  display: flex;
+  white-space: nowrap;
+  text-align: center;
+  font-family: 'Manrope', 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #45464d;
+  opacity: 0.6;
+}
+
+.scroller span {
+  flex-shrink: 0;
+  padding: 0 3rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .scroller {
+    font-size: 1.25rem;
+    line-height: 2.5rem;
+  }
+}

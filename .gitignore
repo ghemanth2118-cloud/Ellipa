@@ -1,0 +1,13 @@
+node_modules/
+dist/
+dist-ssr/
+*.local
+.env
+.env.*
+.DS_Store
+testsprite_tests/tmp/
+
+testsprite_tests\tmp\config.json
+
+.vite/
+test-results/
