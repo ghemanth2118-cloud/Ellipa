@@ -20,7 +20,7 @@ export default function Index() {
       name: "Manahor",
       role: "CFO, Ellipa",
       initials: "M",
-      image: "/public/manahor.jpeg",
+      image: "/manahor.jpeg",
       text: "With zero hidden fees and predictable flat-rate options, we ensure that modern enterprise teams receive unmatched technical ROI and budget certainty."
     },
     {
