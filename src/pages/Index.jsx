@@ -1,10 +1,38 @@
 
 import React, { useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import ScrollVelocity from '../components/ScrollVelocity';
 
 export default function Index() {
   const navigate = useNavigate();
+
+  const team = [
+    {
+      name: "Gyana Vardhan",
+      role: "Founder, Ellipa",
+      initials: "GV",
+      text: "Ellipa was built on the principle of absolute precision. We've replaced billing by the hour with guaranteed, high-performance fixed-cost automation modules."
+    },
+    {
+      name: "Manahor",
+      role: "CFO, Ellipa",
+      initials: "M",
+      text: "With zero hidden fees and predictable flat-rate options, we ensure that modern enterprise teams receive unmatched technical ROI and budget certainty."
+    },
+    {
+      name: "Vikas",
+      role: "Product Manager",
+      initials: "V",
+      text: "Our mission is to translate complex product goals into seamless automated workflows. Ellipa makes inventory and data systems run like clockwork."
+    },
+    {
+      name: "Hemanth",
+      role: "Lead Developer & Partner",
+      initials: "H",
+      text: "Building and scaling workflows on Ellipa is a developer's dream. The custom components and lightning-fast engine let us automate complex logic effortlessly."
+    }
+  ];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -206,33 +234,14 @@ Bridge the gap between 20-year-old legacy systems and modern API-driven architec
         </section>
         {/*  Interactive Product Walkthrough  */}
         <section className="px-page-margin py-section-gap max-w-[1440px] mx-auto">
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-black">
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40 z-10 pointer-events-none" />
-            <div className="relative aspect-video flex items-center justify-center group cursor-pointer">
-              <img alt="Interactive Product Video Walkthrough" className="w-full h-full object-cover" data-alt="An ultra-wide cinematic shot of a futuristic control room with multiple holographic displays showing complex data analytics and automated workflow charts. The lighting is low-key with vibrant blue and teal neon accents illuminating the sleek, minimalist architecture. A single person is silhouetted against the bright displays, conveying a sense of mastery over sophisticated technology. The visual style is crisp and premium, evoking a high-budget tech presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpIo8oBX3nB6k2KKEBNmqsJrPGjd4csRsmfTWNFcw2U2AR9EL767WtayvQm2m420ikWwfpHy_exZrp1CrwUSVxXgQbZ9o129ZW-aZldSqLTQGUuemZOvXfVa4GOX2vB07ySIUygmpEZCFGoiE9VHBRRiZ__9mQCnmdOnR2WfuQaZLHc4INSLwt0H0d9StGkPq_-0Fr1pmXEtLRcn313yJHx0nUBv1N8tix_VyEOWF2iYWa7Xv7FTT6XnpjUtqvkSpzzCtEea79GFou" />
-              <div className="absolute z-20 flex flex-col items-center gap-6">
-                <div className="w-24 h-24 bg-white/20 backdrop-blur-xl rounded-full flex items-center justify-center border border-white/30 group-hover:scale-110 transition-transform group-hover:bg-white/30">
-                  <span className="material-symbols-outlined text-[48px] text-white" style={{"fontVariationSettings":"'FILL' 1"}}>
-play_arrow                  </span>
-                </div>
-                <h2 className="text-white font-display-lg text-headline-lg text-center drop-shadow-lg">
-Experience Ellipa in Action                </h2>
-              </div>
-              {/*  Video Controls Mockup  */}
-              <div className="absolute bottom-10 left-10 right-10 z-20 hidden md:flex items-center gap-6 text-white/80">
-                <span className="font-label-sm text-label-sm">
-03:45 / 12:00                </span>
-                <div className="h-1 flex-1 bg-white/20 rounded-full overflow-hidden">
-                  <div className="h-full w-1/3 bg-secondary" />
-                </div>
-                <div className="flex gap-4">
-                  <span className="material-symbols-outlined">
-settings                  </span>
-                  <span className="material-symbols-outlined">
-fullscreen                  </span>
-                </div>
-              </div>
-            </div>
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-black aspect-video">
+            <video 
+              src="/ellipa.mp4" 
+              controls 
+              preload="metadata"
+              poster="https://lh3.googleusercontent.com/aida-public/AB6AXuBpIo8oBX3nB6k2KKEBNmqsJrPGjd4csRsmfTWNFcw2U2AR9EL767WtayvQm2m420ikWwfpHy_exZrp1CrwUSVxXgQbZ9o129ZW-aZldSqLTQGUuemZOvXfVa4GOX2vB07ySIUygmpEZCFGoiE9VHBRRiZ__9mQCnmdOnR2WfuQaZLHc4INSLwt0H0d9StGkPq_-0Fr1pmXEtLRcn313yJHx0nUBv1N8tix_VyEOWF2iYWa7Xv7FTT6XnpjUtqvkSpzzCtEea79GFou"
+              className="w-full h-full object-cover"
+            />
           </div>
         </section>
         {/*  Testimonials  */}
@@ -245,61 +254,45 @@ fullscreen                  </span>
               See how our core leadership and integration team is driving automation forward.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-gutter mb-16">
-            <div className="p-8 bg-surface-container-low rounded-2xl border border-outline-variant/30 flex flex-col justify-between hover:shadow-lg transition-all">
-              <p className="font-body-lg text-body-lg italic text-on-surface mb-8">
-                "Ellipa was built on the principle of absolute precision. We've replaced billing by the hour with guaranteed, high-performance fixed-cost automation modules."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-secondary-fixed overflow-hidden flex items-center justify-center font-bold text-secondary text-lg">
-                  GV
-                </div>
-                <div>
-                  <p className="font-label-sm text-label-sm text-primary">
-                    Gyana Vardhan
+          <div className="relative overflow-hidden w-full py-4 mb-16">
+            {/* Left and right gradient masks for a smooth fade-out edge effect */}
+            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-surface via-surface/40 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-surface via-surface/40 to-transparent z-10 pointer-events-none" />
+
+            <motion.div 
+              className="flex gap-6 w-max"
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{
+                ease: "linear",
+                duration: 35,
+                repeat: Infinity,
+              }}
+            >
+              {/* Double render to create an endless seamless loop */}
+              {[...team, ...team].map((member, idx) => (
+                <div 
+                  key={idx} 
+                  className="w-[360px] md:w-[400px] p-8 bg-surface-container-low rounded-2xl border border-outline-variant/30 flex flex-col justify-between hover:shadow-lg transition-all shrink-0 select-none"
+                >
+                  <p className="font-body-lg text-body-lg italic text-on-surface mb-8">
+                    "{member.text}"
                   </p>
-                  <p className="text-xs text-on-surface-variant font-semibold">
-                    Founder, Ellipa
-                  </p>
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-secondary-fixed overflow-hidden flex items-center justify-center font-bold text-secondary text-lg">
+                      {member.initials}
+                    </div>
+                    <div>
+                      <p className="font-label-sm text-label-sm text-primary font-bold">
+                        {member.name}
+                      </p>
+                      <p className="text-xs text-on-surface-variant font-semibold">
+                        {member.role}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="p-8 bg-surface-container-low rounded-2xl border border-outline-variant/30 flex flex-col justify-between hover:shadow-lg transition-all">
-              <p className="font-body-lg text-body-lg italic text-on-surface mb-8">
-                "With zero hidden fees and predictable flat-rate options, we ensure that modern enterprise teams receive unmatched technical ROI and budget certainty."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-secondary-fixed overflow-hidden flex items-center justify-center font-bold text-secondary text-lg">
-                  M
-                </div>
-                <div>
-                  <p className="font-label-sm text-label-sm text-primary">
-                    Manahor
-                  </p>
-                  <p className="text-xs text-on-surface-variant font-semibold">
-                    CFO, Ellipa
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="p-8 bg-surface-container-low rounded-2xl border border-outline-variant/30 flex flex-col justify-between hover:shadow-lg transition-all">
-              <p className="font-body-lg text-body-lg italic text-on-surface mb-8">
-                "Building and scaling workflows on Ellipa is a developer's dream. The custom components and lightning-fast engine let us automate complex logic effortlessly."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-secondary-fixed overflow-hidden flex items-center justify-center font-bold text-secondary text-lg">
-                  H
-                </div>
-                <div>
-                  <p className="font-label-sm text-label-sm text-primary">
-                    Hemanth
-                  </p>
-                  <p className="text-xs text-on-surface-variant font-semibold">
-                    Lead Developer & Partner
-                  </p>
-                </div>
-              </div>
-            </div>
+              ))}
+            </motion.div>
           </div>
 
           {/* Scrolling Ticker using React Bits ScrollVelocity */}
