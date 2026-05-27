@@ -11,7 +11,7 @@ export default function Index() {
   const team = [
     {
       name: "Gyan Vardhan",
-      role: "Founder, CEO , Ellipa",
+      role: "Founder & CEO, Ellipa",
       initials: "GV",
       image: "/gyan-vardhan.jpeg",
       text: "Ellipa was built on the principle of absolute precision. We've replaced billing by the hour with guaranteed, high-performance fixed-cost automation modules."
@@ -283,8 +283,16 @@ Bridge the gap between 20-year-old legacy systems and modern API-driven architec
                     "{member.text}"
                   </p>
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-secondary-fixed overflow-hidden flex items-center justify-center font-bold text-secondary text-lg">
-                      {member.initials}
+                    <div className="w-12 h-12 rounded-full bg-secondary-fixed overflow-hidden flex items-center justify-center font-bold text-secondary text-lg shrink-0 border border-outline-variant/30">
+                      {member.image ? (
+                        <img 
+                          src={member.image} 
+                          alt={member.name} 
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        member.initials
+                      )}
                     </div>
                     <div>
                       <p className="font-label-sm text-label-sm text-primary font-bold">

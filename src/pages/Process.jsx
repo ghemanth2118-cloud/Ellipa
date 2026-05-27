@@ -16,7 +16,21 @@ export default function Process() {
       {/*  Hero Section  */}
       
       {/*  Vertical Process Steps  */}
-      <main className="pt-28 max-w-max-width mx-auto px-page-margin pb-section-gap">
+      <main className="pt-40 max-w-max-width mx-auto px-page-margin pb-section-gap">
+        {/* Process Header */}
+        <div className="text-center mb-24 max-w-3xl mx-auto">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm mb-6 shadow-sm">
+            <span className="material-symbols-outlined text-[18px]">account_tree</span>
+            MODULAR ENGAGEMENT MODEL
+          </span>
+          <h1 className="font-display-xl text-display-xl tracking-tight text-primary mb-6">
+            Our High-Fidelity <span className="text-secondary">Methodology</span>
+          </h1>
+          <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            From initial discovery to self-correcting autonomous operations, our step-by-step process guarantees 100% predictable fixed-cost delivery and continuous optimization.
+          </p>
+        </div>
+
         <div className="space-y-section-gap">
           {/*  Step 1: Discovery  */}
           <section className="grid grid-cols-1 lg:grid-cols-2 gap-section-gap items-center relative">
